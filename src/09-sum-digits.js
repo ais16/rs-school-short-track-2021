@@ -11,10 +11,10 @@
  *
  */
 function recursiveDig(n) {
+  const arr = String(n).split('');
   let sum = 0;
-  while (n) {
-    sum += n % 10;
-    return Math.floor(n / 10);
+  for (let i = 0; i < arr.length; i++) {
+    sum += parseInt(arr[i], 10);
   }
   if (sum >= 10) {
     return recursiveDig(sum);
