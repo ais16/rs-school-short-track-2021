@@ -10,8 +10,20 @@
  * For 91, the result should be 1 (9 + 1 = 10, 1 + 0 = 1)
  *
  */
-function getSumOfDigits(/* n */) {
-  throw new Error('Not implemented');
+function recursiveDig(n) {
+  let sum = 0;
+  while (n) {
+    sum += n % 10;
+    return Math.floor(n / 10);
+  }
+  if (sum >= 10) {
+    return recursiveDig(sum);
+  }
+  return sum;
+}
+
+function getSumOfDigits(n) {
+  return recursiveDig(n);
 }
 
 module.exports = getSumOfDigits;
