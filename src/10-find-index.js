@@ -12,7 +12,7 @@
  *
  */
 function findIndex(array, value) {
-  let b = array.indexOf(value);
+  const b = array.indexOf(value);
   return b;
 }
 
