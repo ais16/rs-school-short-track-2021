@@ -15,7 +15,7 @@ function getCommonCharacterCount(s1, s2) {
   const secondArr = s2.split('');
   for (let i = 0; i < firstArr.length; i++) {
     if (secondArr.includes(firstArr[i])) {
-      sum = sum + 1;
+      sum += 1;
       secondArr.splice(secondArr.indexOf(firstArr[i]), 1);
     }
   }
